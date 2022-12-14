@@ -10,8 +10,14 @@ datasource db {
   url      = "file:./dev.db" // env("DATABASE_URL")
 }
 
-model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+model Planet {
+  id          Int         @id @default(autoincrement())
+  name        String      
+  diameter    String
+  gravity     String
+  terrain     String
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  deletedAt   DateTime?
+  @@unique([name, deletedAt])
 }

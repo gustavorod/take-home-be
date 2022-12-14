@@ -47,9 +47,10 @@ async function bootstrap() {
   // Init Swagger docs
   if (config.get('NODE_ENV') !== Environment.production) {
     const swaggerConfig = new DocumentBuilder()
-      .setTitle('Boilerplate API')
-      .setDescription('Example docs')
+      .setTitle('Planets API')
+      .setDescription('Exercise')
       .setVersion(config.get('npm_package_version') as string)
+      .addBearerAuth()
       .build();
     const document = SwaggerModule.createDocument(app, swaggerConfig);
     SwaggerModule.setup('api', app, document);

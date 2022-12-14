@@ -39,3 +39,4 @@ lerna-debug.log*
 
 # Husky configs
 .husky/
+*.db
