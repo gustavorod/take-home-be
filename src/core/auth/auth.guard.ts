@@ -4,8 +4,8 @@ import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';
 export class SimpleAuthGuard implements CanActivate {
   canActivate(context: ExecutionContext): boolean {
     const request = context.switchToHttp().getRequest();
-    const token = request.headers.authorization || ''; 
+    const token = request.headers.authorization || '';
 
-    return (token == 'Bearer TokenTest');
+    return token == 'Bearer TokenTest';
   }
 }

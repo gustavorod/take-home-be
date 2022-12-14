@@ -1,16 +1,15 @@
-import { ApiProperty } from "@nestjs/swagger";
+import { ApiProperty } from '@nestjs/swagger';
 
 export class CreatePlanetDto {
   @ApiProperty()
-  name: string = "";
+  name = '';
 
   @ApiProperty()
-  diameter: string = "";
+  diameter = '';
 
   @ApiProperty()
-  gravity: string = "";
+  gravity = '';
 
   @ApiProperty()
-  terrain: string = "";
-
+  terrain = '';
 }

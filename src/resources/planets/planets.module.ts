@@ -7,6 +7,6 @@ import { PrismaModule } from '@/db/prisma/prisma.module';
 @Module({
   imports: [HttpModule, PrismaModule],
   controllers: [PlanetsController],
-  providers: [PlanetsService]
+  providers: [PlanetsService],
 })
 export class PlanetsModule {}
