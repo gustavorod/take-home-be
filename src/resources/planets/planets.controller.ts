@@ -32,6 +32,7 @@ export class PlanetsController {
   }
 
   @ApiBearerAuth()
+  @UseGuards(SimpleAuthGuard)
   @ApiOkResponse({type: PlanetEntity, isArray: false})
   @ApiResponse({ status: 404, description: 'Planet not found' })
   @Delete(':id')
