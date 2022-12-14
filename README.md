@@ -61,6 +61,12 @@ You can use Docker, but we suggest for the sake of speed, to set up a local env 
 # To start working, install dependencies:
 $ npm install
 
+# To sync your database:
+$ npx prisma migrate dev --name init
+
 # You can run the app in watch mode
 $ npm run start:dev
 ```
+### Token API
+
+Use the secret TokenTest as bearer token when trying to access protected endpoints
